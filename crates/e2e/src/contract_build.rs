@@ -177,7 +177,7 @@ fn build_contract(path_to_cargo_toml: &Path) -> PathBuf {
         keep_debug_symbols: false,
         output_type: OutputType::HumanReadable,
         skip_wasm_validation: false,
-        target: Target::Wasm,
+        target: Target::RiscV,
         .. Default::default()
     };
 
