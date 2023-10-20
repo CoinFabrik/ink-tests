@@ -69,6 +69,8 @@ where
         let contracts_node =
             std::env::var("CONTRACTS_NODE").unwrap_or(DEFAULT_CONTRACTS_NODE.to_owned());
 
+        tracing::info!("Spawning contracts node at {contracts_node}");
+
         // Check the specified contracts node.
         if which::which(&contracts_node).is_err() {
             if contracts_node == DEFAULT_CONTRACTS_NODE {
